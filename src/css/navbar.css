@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --bg-color: #1c1c1e;
+    --white-color: #fff;
+    --button-bg: #333;
+    --button-hover-bg: #444;
+    --button-color: #fff;
+    --search-bg: #333;
+    --search-button-bg: #555;
+    --search-color: #fff;
+    --font-size: 16px;
+    --button-font-size: 14px;
+    --logo-hover-color: #ffdd57; /* New hover color for the logo */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding-top: 80px; /* Adjust this value to the height of the navbar to prevent content from being hidden behind the fixed navbar */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.navbar-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 20px 20px; /* Add padding to create space around the navbar */
+    box-sizing: border-box; /* Ensure padding is included in the element's total width and height */
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(17, 16, 16, 0.85);
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding and border are included in the element's total width and height */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    color: var(--white-color);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.logo-star {
+    margin-bottom: 5px;
+    margin-right: 5px;
+    font-size: 24px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.logo-container:hover .logo {
+    color: var(--logo-hover-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 15px;
+}
+
+.search-input {
+    height: 36px;
+    padding: 0 50px 0 15px;
+    border: 1px solid var(--search-bg);
+    border-radius: 36px;
+    background-color: var(--search-bg);
+    color: var(--search-color);
+    font-size: var(--font-size);
+    transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--button-hover-bg);
+    box-shadow: 0 0 3px var(--button-hover-bg);
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--search-button-bg);
+    color: var(--button-color);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.search-button ion-icon {
+    font-size: 20px;
+}
+
+.search-button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.nav-button, .source-button {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    margin-right: 15px;
+    border: 1px solid var(--button-bg);
+    border-radius: 36px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+    font-size: var(--button-font-size);
+    font-weight: 700;
+}
+
+.nav-button:last-child, .source-button:last-child {
+    margin-right: 0;
+}
+
+.nav-button:hover, .source-button:hover {
+    background-color: var(--button-hover-bg);
+    border-color: var(--button-hover-bg);
+}
+
+.source-button ion-icon {
+    margin-right: 5px;
+    font-size: 20px;
+}

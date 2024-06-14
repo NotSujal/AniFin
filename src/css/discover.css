@@ -1,0 +1,110 @@
+/* discover.css */
+
+:root {
+  --white-color: #fff;
+  --anime-bg: rgba(240, 140, 0, 0.8); /* Slightly transparent orange color for anime */
+  --manga-bg: rgba(54, 101, 95, 0.8); /* Slightly transparent color used for anime in the picture for manga */
+  --backdrop-bg: rgba(0, 0, 0, 0.5); /* Translucent background for sections */
+}
+
+.discover-section {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  
+  color: var(--white-color);
+  
+}
+
+.discover-animanga {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.discover-anime, .discover-manga {
+  flex: 1 1 calc(50% - 40px);
+  max-width: 600px;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(5px);
+  
+}
+
+.discover-anime:hover, .discover-manga:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.discover-anime .label, .discover-manga .label {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white-color);
+  font-weight: bold;
+  font-size: 18px;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50% 0 0 50%;
+}
+
+.discover-anime .label {
+  background-color: var(--anime-bg);
+  font-size: 24px;
+}
+
+.discover-manga .label {
+  background-color: var(--manga-bg);
+  font-size: 24px;
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 24px;
+  transition: transform 0.3s ease;
+}
+
+.discover-anime:hover .arrow, .discover-manga:hover .arrow {
+  transform: translateX(5px);
+}
+
+.discover-anime {
+  background: url(https://assets-prd.ignimgs.com/2022/08/17/top25animecharacters-blogroll-1660777571580.jpg) no-repeat center center/cover;
+}
+
+
+
+.discover-manga {
+  background: url(https://static1.cbrimages.com/wordpress/wp-content/uploads/2022/08/steel-ball-run.jpg) no-repeat center center/cover;
+}
+
+@media (max-width: 768px) {
+  .discover-anime, .discover-manga {
+      flex: 1 1 100%;
+      max-width: 100%;
+      height: auto;
+      aspect-ratio: auto;
+  }
+
+  .discover-heading p:first-child {
+      font-size: 20px;
+  }
+
+  .discover-heading p:last-child {
+      font-size: 16px;
+  }
+}

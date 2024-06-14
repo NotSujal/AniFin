@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Phantom+Sans:wght@400;700&display=swap');
+
+:root {
+    --white-color: #fff;
+    --bg-color: #1a1a1b; /* Dark grayish background */
+    --backdrop-bg: rgba(0, 0, 0, 0.5); /* Translucent background for sections */
+    --scale-factor: 1.2; /* Scale factor equivalent to 110% */
+}
+
+body {
+    color: var(--white-color);
+    font-family: 'Phantom Sans', system-ui, sans-serif;
+    margin: 0;
+    background: rgb(27, 26, 26);
+    transform: scale(var(--scale-factor));
+    transform-origin: top left;
+    width: calc(100% / var(--scale-factor));
+    height: calc(100% / var(--scale-factor));
+    overflow-x: hidden;
+}

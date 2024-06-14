@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --white-color: #fff;
+    --backdrop-bg: rgba(0, 0, 0, 0.5); /* Translucent background for sections */
+}
+
+.header-wrapper {
+    margin: 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+
+.main-header {
+    border-radius: 15px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0;
+    background: url('https://t4.ftcdn.net/jpg/02/97/79/83/360_F_297798377_VB9egqGnRKcZxU53wybEHLRnnTrcvlAH.jpg') no-repeat center center/cover; /* Update with your new background image URL */;
+}
+
+.main-header-quote {
+    padding: 20px 30px;
+    border-radius: 15px;
+    background: var(--backdrop-bg) no-repeat center center/cover;
+    margin-left: 30px;
+    backdrop-filter: blur(5px);
+    max-width: 800px;
+}
+
+.main-header-quote p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.main-header-quote .highlight {
+    font-weight: bold;
+    font-size: 26px;
+}
+
+
